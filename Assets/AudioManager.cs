@@ -30,8 +30,6 @@ public class AudioManager : MonoBehaviour {
     {
         if( Input.GetKeyDown( KeyCode.Keypad1 ) )
         {
-            print( "Launch Sound 1" );
-
             m_audioBehaviorArray[ 1 ].InitLerp( 0, 1, m_lerpTime );
         }
         if( Input.GetKeyDown( KeyCode.Keypad2 ) )
@@ -46,7 +44,6 @@ public class AudioManager : MonoBehaviour {
         {
             m_audioBehaviorArray[ 4 ].InitLerp( 0, 1, m_lerpTime );
         }
-        
 
         if( Time.time > m_loopTimer + m_audioSourceArray[ 0 ].clip.length-.5f )
         {
@@ -79,7 +76,6 @@ public class AudioManager : MonoBehaviour {
                 m_audioBehaviorArray[i].InitLerp( m_audioBehaviorArray[ i ].Volume, 0, m_lerpTime );
             }
             
-
         }
         
     }
@@ -121,7 +117,7 @@ public class AudioManager : MonoBehaviour {
 
     #region Private Members
 
-    private float m_lerpTime =3f;
+    private float m_lerpTime =1f;
     public bool m_isLerpingOut;
     AudioSource[] m_audioSourceArray = new AudioSource[5];
     AudioBehavior[] m_audioBehaviorArray =  new AudioBehavior[5];
