@@ -60,14 +60,11 @@ public class AudioManager : MonoBehaviour {
         }
         if( Time.time > m_loopTimer + m_audioSourceArray[ 0 ].clip.length )
         {
-
-            //m_audioBehaviorArray[ 0 ].InitLerp( 0, 1, 1 );
             m_loopTimer = Time.time;
             ResetAllAudioExceptBase();
         }
 
         UpdateAudioBehaviors();
-
     }
 
     public void LerpAllOut()
